@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<div class="container">
+    <div class="row">
+    {% for ilan in object_list %}
+        <div class="col-lg-4 col-md-8 col-sm-12 col-xs-12">
+            <div class="card">
+                <div class="card-header">
+                    <a href='../ilan/{{ ilan.id }}'>{{ ilan.baslik }}</a>
+                </div>
+                <img class="card-img-top" src="https://via.placeholder.com/280x150" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title"><em>{{ ilan.olusturma_tarihi }}</em></h5>
+                    <p class="card-text">{{ ilan.metin }}</p>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+</div>
+
+
+
+
+{% endblock %}
